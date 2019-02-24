@@ -6,26 +6,35 @@ Design a data structure that supports all following operations in average O(1) t
 3. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.
 
 **Example:**
-  // Init an empty set.
-  RandomizedSet randomSet = new RandomizedSet();
+// Init an empty set.
 
-  // Inserts 1 to the set. Returns true as 1 was    inserted successfully.
-  randomSet.insert(1);
+RandomizedSet randomSet = new RandomizedSet();
 
-  // Returns false as 2 does not exist in the set.
-  randomSet.remove(2);
+// Inserts 1 to the set. Returns true as 1 was    inserted successfully.
+  
+randomSet.insert(1);
 
-  // Inserts 2 to the set, returns true. Set now contains [1,2].
-  randomSet.insert(2);
+// Returns false as 2 does not exist in the set.
+  
+randomSet.remove(2);
 
-  // getRandom should return either 1 or 2 randomly.
-  randomSet.getRandom();
+// Inserts 2 to the set, returns true. Set now contains [1,2].
+  
+randomSet.insert(2);
 
-  // Removes 1 from the set, returns true. Set now contains [2].
-  randomSet.remove(1);
+// getRandom should return either 1 or 2 randomly.
+  
+randomSet.getRandom();
 
-  // 2 was already in the set, so return false.
-  randomSet.insert(2);
+// Removes 1 from the set, returns true. Set now contains [2].
 
-  // Since 2 is the only number in the set, getRandom always return 2.
-  randomSet.getRandom();
+randomSet.remove(1);
+
+// 2 was already in the set, so return false.
+
+randomSet.insert(2);
+
+// Since 2 is the only number in the set, getRandom always return 2.
+
+randomSet.getRandom();
+`
