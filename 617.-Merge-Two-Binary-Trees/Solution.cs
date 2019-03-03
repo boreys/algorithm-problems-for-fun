@@ -8,6 +8,7 @@
  * }
  */
 public class Solution {
+    //runtime: O(n), memory: O(1)
     public TreeNode MergeTrees(TreeNode t1, TreeNode t2) {
         if(t1 == null && t2 == null){
             return null;
