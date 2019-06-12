@@ -1,26 +1,37 @@
-# Implementing Priority Queue in C#
-There is no PriorityQueue in dotnet Framework or Core. It is a very useful class to solve some hard algorithm problem. So, here is my implementation for the world to use.
+# Implementing Priority Queue or Heap in C#
+There is no PriorityQueue or Heap data structure in dotnet Framework or Core. It is a very useful class to solve some hard algorithm problem. So, here is my implementation for the world to use. 
 
 **Example:**
 ```
-public static void Main(string[] args)
+class MainClass
 {
-    PriorityQueue<int> que = new PriorityQueue<int>();
-    que.Add(4);
-    que.Add(25);
-    Console.WriteLine($"Peek: {que.Peek()}, Count: {que.Count}");
-
-    List<int> arr = que.List;
-
-    foreach (var item in arr)
+    public static void Main(string[] args)
     {
-        Console.Write($"{item}->");
-    }
-    que.Poll();
-    que.Poll();
-    Console.WriteLine();
-    Console.WriteLine($"After Poll() twice => Count: {que.Count}");
+        PriorityQueue<int> minHeap = new PriorityQueue<int>();
+        minHeap.Add(4);
+        minHeap.Add(25);
+        minHeap.Add(2);
+        minHeap.Add(1);
 
-    Console.WriteLine("Done!");
+        while(minHeap.Count > 0)
+        {
+            var item = minHeap.Poll();
+            Console.Write($"{item}->");
+        }
+        Console.WriteLine();
+
+        PriorityQueue<int> maxHeap = new PriorityQueue<int>((int a, int b) => b.CompareTo(a));
+        maxHeap.Add(500);
+        maxHeap.Add(100);
+        maxHeap.Add(200);
+        maxHeap.Add(50);
+
+        while(maxHeap.Count > 0)
+        {
+            var item = maxHeap.Poll();
+            Console.Write($"{item}->");
+        }
+        Console.WriteLine();
+    }
 }
 ```
